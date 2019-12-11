@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KvetonMoBank.UserMainPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="background" BackgroundColor="#211e1e">
+            <Grid Margin="20" HeightRequest="70">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="45"/>
+                    <ColumnDefinition Width="135"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Welcome,"
+                       TextColor="WhiteSmoke"
+                       FontSize="30"
+                       Grid.Column="1"/>
+                <Label Text="{Binding Name}"
+                       x:Name="labelName"
+                       TextColor="WhiteSmoke"
+                       FontSize="30"
+                       Grid.Column="2"/>
+            </Grid>
+            <Button Text="Login info"
+                    x:Name="button1"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="#574fa1"
+                    Margin="10"
+                    Clicked="LoginInfoButton_Clicked"/>
+            <Button Text="Bank account info"
+                    x:Name="button2"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="#574fa1"
+                    Margin="10"
+                    Clicked="BankAccountInfoButton_Clicked"/>
+            <Button Text="Make a payment"
+                    x:Name="button3"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="#574fa1"
+                    Margin="10"
+                    Clicked="SendMoneyButton_Clicked"/>
+            <Button Text="VIP"
+                    x:Name="button4"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="#574fa1"
+                    Margin="10"
+                    Clicked="VIPButton_Clicked"/>
+            <Button Text="Delete Account"
+                    x:Name="button5"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="#574fa1"
+                    Clicked="DeleteButton_Clicked"
+                    VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KvetonMoBank.UserBankAccountInfo">
+    <ContentPage.Content>
+        <Grid x:Name="page" BackgroundColor="#211e1e">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Label TextColor="WhiteSmoke" 
+                   Text="Bank Account Info"
+                   Grid.Row="0"
+                   Margin="20"
+                   FontSize="30"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="22"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="250"/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="WhiteSmoke" 
+                       Text="Client:" 
+                       FontSize="20"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
+                <Label TextColor="WhiteSmoke" 
+                       x:Name="labelName" 
+                       Text="{Binding Name}" 
+                       FontSize="20"
+                       Grid.Row="0"
+                       Grid.Column="2"/>
+                <Label TextColor="WhiteSmoke" 
+                       x:Name="labelSurname" 
+                       Text="{Binding Surname}" 
+                       FontSize="20"
+                       Grid.Row="1"
+                       Grid.Column="2"/>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="170"/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="WhiteSmoke" 
+                       Text="Account Number:" 
+                       FontSize="20" 
+                       Grid.Column="1"/>
+                <Label TextColor="WhiteSmoke" 
+                       x:Name="labelAccountNumber" 
+                       Text="{Binding AccountNumber}" 
+                       FontSize="20" 
+                       Grid.Column="2"/>
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="WhiteSmoke" 
+                       Text="Balance:" 
+                       FontSize="20" 
+                       Grid.Column="1"/>
+                <Label TextColor="WhiteSmoke" 
+                       x:Name="labelBalance" 
+                       Text="{Binding Balance}" 
+                       FontSize="20" 
+                       Grid.Column="2"/>
+            </Grid>
+
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="WhiteSmoke" 
+                       Text="Created Date:" 
+                       FontSize="20" 
+                       Grid.Column="1"/>
+                <Label TextColor="WhiteSmoke" 
+                       x:Name="labelCreateDate" 
+                       Text="{Binding CreateDate}" 
+                       FontSize="20" 
+                       Grid.Column="2"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

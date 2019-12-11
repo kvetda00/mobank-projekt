@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KvetonMoBank.UserAccountInfo">
+    <ContentPage.Content>
+        <Grid x:Name="page" BackgroundColor="#211e1e">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="202"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+
+            <Label TextColor="WhiteSmoke" 
+                   Text="Login Info"
+                   Grid.Row="0"
+                   Margin="20"
+                   FontSize="30"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="WhiteSmoke" 
+                       Text="Username:"
+                       Margin="10,0,0,0"
+                       FontSize="20" 
+                       Grid.Column="0"/>
+                <Label TextColor="WhiteSmoke" 
+                       x:Name="labelUsername" 
+                       Text="{Binding Username}" 
+                       FontSize="20" 
+                       Grid.Column="2"/>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="WhiteSmoke" 
+                       Text="Password:"
+                       Margin="10,0,0,0"
+                       FontSize="20" 
+                       Grid.Column="0"/>
+                <Label TextColor="WhiteSmoke" 
+                       x:Name="labelPassword" 
+                       Text="{Binding Password}" 
+                       FontSize="20" 
+                       Grid.Column="2"/>
+            </Grid>
+            <Button BackgroundColor="#574fa1"
+                    TextColor="WhiteSmoke" 
+                    Text="Edit Account"
+                    x:Name="editButton"
+                    VerticalOptions="End"
+                    HeightRequest="60"
+                    Clicked="EditButton_Clicked" 
+                    Grid.Row="4"
+                    FontSize="15"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

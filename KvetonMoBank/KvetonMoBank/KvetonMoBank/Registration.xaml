@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KvetonMoBank.Registration">
+    <Grid BackgroundColor="#211e1e">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="325"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Label Text="Registration"
+               TextColor="WhiteSmoke"
+               Grid.Row="0"
+               FontSize="30"
+               FontAttributes="Italic"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+        
+        <Grid Grid.Row="1" BackgroundColor="#211e1e" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+            <BoxView 
+                BackgroundColor="#211e1e"
+                Grid.Row="0"/>
+            <Label 
+                Text="Name" 
+                TextColor="WhiteSmoke"
+                FontAttributes="Italic"
+                Grid.Row="0" 
+                FontSize="15" />
+            <BoxView 
+                BackgroundColor="#574fa1"
+                Grid.Row="1"/>
+            <Entry 
+                FontSize="14" 
+                TextColor="WhiteSmoke"
+                Placeholder="name"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Grid.Row="1"
+                x:Name="name"
+                />
+            <BoxView 
+                BackgroundColor="#211e1e"
+                Grid.Row="2"/>
+            <Label 
+                Text="Surname" 
+                TextColor="WhiteSmoke"
+                FontAttributes="Italic"
+                Grid.Row="2" 
+                FontSize="15" />
+            <BoxView 
+                BackgroundColor="#574fa1"
+                Grid.Row="3"/>
+            <Entry 
+                FontSize="14" 
+                TextColor="WhiteSmoke"
+                Placeholder="surname"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Grid.Row="3"
+                x:Name="surname"
+                />
+            <BoxView 
+                BackgroundColor="#211e1e"
+                Grid.Row="4"/>
+            <Label 
+                Text="Username" 
+                TextColor="WhiteSmoke"
+                FontAttributes="Italic"
+                Grid.Row="4" 
+                FontSize="15" />
+            <BoxView 
+                BackgroundColor="#574fa1"
+                Grid.Row="5"/>
+            <Entry 
+                FontSize="14" 
+                TextColor="WhiteSmoke"
+                Placeholder="username"
+                Unfocused="username_Unfocused"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Grid.Row="5"
+                x:Name="username"
+                />
+            <BoxView
+                BackgroundColor="#211e1e"
+                Grid.Row="6"/>
+            <Label 
+                Text="Password" 
+                TextColor="WhiteSmoke"
+                FontAttributes="Italic"
+                Grid.Row="6"
+                FontSize="15" />
+            <BoxView 
+                BackgroundColor="#574fa1"
+                Grid.Row="7"/>
+            <Entry 
+                FontSize="14"
+                TextColor="WhiteSmoke"
+                Placeholder="password"
+                HorizontalOptions="Fill"
+                IsPassword="True"
+                VerticalOptions="Fill"
+                Grid.Row="7"
+                x:Name="password"
+                Unfocused="password_Unfocused"/>
+            <BoxView
+                BackgroundColor="#211e1e"
+                Grid.Row="8"/>
+            <Label 
+                Text="Password again" 
+                TextColor="WhiteSmoke"
+                FontAttributes="Italic"
+                Grid.Row="8"
+                FontSize="15" />
+            <BoxView 
+                BackgroundColor="#574fa1"
+                Grid.Row="9"/>
+            <Entry 
+                FontSize="14"
+                TextColor="WhiteSmoke"
+                Placeholder="password again"
+                HorizontalOptions="Fill"
+                IsPassword="True"
+                VerticalOptions="Fill"
+                Grid.Row="9"
+                x:Name="passwordAgain"
+                Unfocused="passwordAgain_Unfocused"/>
+
+        </Grid>
+        <Grid BackgroundColor="#211e1e" Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="360*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button 
+                Text="Create Account"
+                TextColor="WhiteSmoke"
+                BackgroundColor="#574fa1"
+                FontSize="15"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Grid.Column="0"
+                Clicked="CreateAccbtn_OnClicked"/>
+        </Grid>
+    </Grid>
+</ContentPage>

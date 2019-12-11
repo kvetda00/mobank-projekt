@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KvetonMoBank.MainPage">
+
+    <Grid BackgroundColor="#211e1e">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <Label Text="Mobank"
+               TextColor="WhiteSmoke"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Grid.Row="0"
+               FontSize="40"
+               FontAttributes="Bold"/>
+
+        <Grid BackgroundColor="#211e1e" Grid.Row="1" Padding="-20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="65"/>
+                <RowDefinition Height="45"/>
+            </Grid.RowDefinitions>
+            <Label Text="Login"
+                   TextColor="WhiteSmoke"
+                   FontSize="30"
+                   FontFamily="Italic"
+                   FontAttributes="Italic"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"                
+                   Grid.Row="1"/>
+        </Grid>
+        <Grid Grid.Row="2" BackgroundColor="#211e1e" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <BoxView 
+                BackgroundColor="#211e1e"
+                Grid.Row="0"/>
+            <Label 
+                Text="Username"
+                TextColor="WhiteSmoke"
+                FontAttributes="Italic"
+                Grid.Row="0" 
+                FontSize="20"/>
+            <BoxView 
+                BackgroundColor="#574fa1"
+                Grid.Row="1"/>
+            <Entry 
+                FontSize="20" 
+                TextColor="WhiteSmoke"
+                Placeholder="username"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Grid.Row="1"
+                x:Name="username"/>
+            <BoxView
+                BackgroundColor="#211e1e"
+                Grid.Row="2"/>
+            <Label 
+                Text="Password"
+                TextColor="WhiteSmoke"
+                FontAttributes="Italic"
+                Grid.Row="2"
+                FontSize="20" />
+            <BoxView 
+                BackgroundColor="#574fa1"
+                Grid.Row="3"/>
+            <Entry 
+                FontSize="20"
+                Placeholder="password"
+                TextColor="WhiteSmoke"
+                HorizontalOptions="Fill"
+                IsPassword="True"
+                VerticalOptions="Fill"
+                
+                Grid.Row="3"
+                x:Name="password"/>
+        </Grid>
+        <Grid BackgroundColor="#211e1e" Grid.Row="4" Padding="0,20,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            
+            <Button 
+                Text="Sign in"
+                TextColor="WhiteSmoke"
+                BackgroundColor="#574fa1"
+                FontSize="15"
+                WidthRequest="200"
+                HorizontalOptions="Center"
+                VerticalOptions="Fill"
+                Grid.Row="0"
+                Clicked="Loginbtn_OnClicked"/>
+            <Button 
+                Text="Sign up"
+                TextColor="WhiteSmoke"
+                BackgroundColor="#574fa1"
+                FontSize="15"
+                WidthRequest="200"
+                HorizontalOptions="Center"
+                VerticalOptions="Fill"
+                Grid.Row="2"
+                Clicked="SignUpbtn_OnClicked"/>
+        </Grid>
+    </Grid>
+</ContentPage>

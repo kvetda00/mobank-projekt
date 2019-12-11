@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KvetonMoBank.UserAccountInfoEdit">
+    <ContentPage.Content>
+        <StackLayout x:Name="page" BackgroundColor="#211e1e">
+            <Label Text="Edit Account"
+                   TextColor="WhiteSmoke"
+                   Margin="20"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="30"/>   
+            
+            <Label Text="New username" 
+                   FontSize="20" 
+                   TextColor="WhiteSmoke"/>
+            <Entry Placeholder="username" 
+                   TextColor="WhiteSmoke" 
+                   x:Name="newUsername"
+                   Unfocused="newUsername_Unfocused"
+                   BackgroundColor="#574fa1"/>            
+                
+            <Label Text="New password" 
+                   FontSize="20" 
+                   TextColor="WhiteSmoke"/>
+            <Entry Placeholder="password" 
+                   FontSize="20"                
+                   TextColor="WhiteSmoke" 
+                   x:Name="newPassword"         
+                   IsPassword="True" 
+                   BackgroundColor="#574fa1"/>        
+
+            <Label Text="New password again" 
+                   FontSize="20" 
+                   TextColor="WhiteSmoke"/>
+            <Entry Placeholder="password again" 
+                   FontSize="20" 
+                   TextColor="WhiteSmoke" 
+                   x:Name="newPasswordAgain"
+                   Unfocused="newPasswordAgain_Unfocused"
+                   IsPassword="True" 
+                   BackgroundColor="#574fa1"/>        
+
+            <Button Text="Update" 
+                    TextColor="WhiteSmoke" 
+                    FontSize="15"
+                    x:Name="updateButton"
+                    BackgroundColor="#574fa1" 
+                    HorizontalOptions="Center"
+                    WidthRequest="400"
+                    HeightRequest="60"
+                    VerticalOptions="EndAndExpand"
+                    Clicked="UpdateButton_Clicked"/>        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
